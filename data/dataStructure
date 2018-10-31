@@ -1,0 +1,29 @@
+rides table:
+
+| feature | definition |
+| ------- | ---------- |
+| ride_id | ID of the ride |
+| user_id | ID of the user |
+| loyalty.status | loyalty status of the user. 0 = red, 1 = silver, 2 = gold, 3 = platinum |
+| booking_id | booking's ID, if the ride was booked in advance. Null in case the ride was not a booking |
+| isGuest | if the user was a guest: for instance a company's client which ride was paid by the company. 
+            The client did not pay the ride and is not awarded any loyalty point |
+| loyalty_points_earned | loyalty points awarded by the ride |
+| price.loyalty.points_spent | loyalty points spent to pay for a ride |
+| price_nominal | price before reduction and surge (surge can increase the price in case the demand is much higher than the offer)  |
+| price_after_discount | ride's price after discounts and surge (surge is the increase in pricing in case of driver shortage) |
+| state | state of the ride: completed, not_completed: whether the ride was completed or not (for whatever possible reason) |
+| quote_date | local date when the user sees the price of a ride in his app |
+
+
+events table:
+It stores the promotion or discount events. Many types of events are stored, some out of the scope of this project.
+When the user claims the promocode, a 'coupon_created' event is added/stored in database
+
+| feature | definition |
+| ------- | ---------- |
+| event_id | ID of the event |
+| ride_id | ID of the ride associated with the event (not in case of coupon_created where this ID is null) |
+| type | type of the event. Can be 'other_coupon_action', 'coupon_created' |
+| user_id | ID of the user |
+| promocode_name | name of the promocode |
