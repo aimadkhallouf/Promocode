@@ -12,6 +12,11 @@ The eligible rides may give up to 5 times the usual amount of points earned duri
 The data studied in this project contains a random subset of the rides from beginning of March to the end of May. There are 2 datasets to study in this project:
 - events.csv used to store promotion and discount events.
 - rides.csv stores information about the rides and users.
+
 For a full description of the datasets, please visit the data folder.
 
-In this projetct, I am going to study and analyse the data collected during Promocode. In particular, I will determine if this marketing campaign was successful. Following this, a startegy will be elaborated to make this campaign profitable for the campany and beneficial for the users at the same time. 
+In this project, I am going to study and analyse the data collected during Promocode. In particular, I will determine if this marketing campaign was successful. Following this, a data-driven startegy will be elaborated to make this campaign profitable for the campany and beneficial for the users at the same time.
+
+*Nota Bene*
+- The original files have been split into multiple files because their sizes exceed 25Mo, which is the limit beyond which no file can pushed to the server. Please run the mergeFiles.py to restore the original files.
+- Some interactive widgets are not displayed when the Jupyter notebook is opened in github. Please take a look at demo file to see how you can use them.
